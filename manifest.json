@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "법인카드 내역 조회·다운로드",
+  "version": "2.15.0",
+  "minimum_chrome_version": "111",
+  "description": "법인카드 이용내역을 조회해 엑셀로 내려받고, 구글 시트 '카드사용' 시트에 자동 입력까지 수행합니다.",
+  "permissions": ["activeTab", "scripting", "storage", "downloads", "unlimitedStorage"],
+  "host_permissions": ["<all_urls>", "file:///*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html" }
+}

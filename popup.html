@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>법인카드 내역 조회·다운로드</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <h1>법인카드 내역 다운로드</h1>
+
+  <fieldset>
+    <legend>조회 기간</legend>
+    <div class="grid">
+      <label>시작일<input id="from" type="date"></label>
+      <label>종료일<input id="to" type="date"></label>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>구글 시트 자동 입력 (선택)</legend>
+    <label class="chk"><input id="sheetSync" type="checkbox"> 다운로드 후 시트에 자동 입력</label>
+    <label>Apps Script 웹앱 URL<input id="gsUrl" type="text" placeholder="https://script.google.com/macros/..."></label>
+    <div class="grid">
+      <label>시트 이름<input id="sheetName" type="text" value="카드사용"></label>
+      <label>비밀번호 (선택)<input id="gsSecret" type="password" placeholder="스크립트에 넣은 값"></label>
+    </div>
+    <p class="tiny">설정 방법은 매뉴얼 9장 — 시트의 Apps Script에 제공된 코드를 넣고 배포한 웹앱 URL을 여기에 넣으면, 다운로드된 엑셀 내용이 시트의 '카드사용' 시트에 자동 기록됩니다.</p>
+  </fieldset>
+
+  <button id="go">다운로드</button>
+  <output id="state">대기 중</output>
+  <p id="error" role="alert"></p>
+  <div class="actions"><button id="stop" class="sub">중지</button><button id="reset" class="sub">초기화</button></div>
+  <div class="actions"><button id="diag" class="sub">진단</button><button id="clear" class="sub">로그 삭제</button><button id="csv" class="sub">CSV 저장</button></div>
+  <pre id="logs" aria-label="실행 로그"></pre>
+</body>
+</html>

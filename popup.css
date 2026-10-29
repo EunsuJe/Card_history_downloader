@@ -1,0 +1,23 @@
+body { width: 390px; margin: 16px; font: 13px/1.5 system-ui, sans-serif; color: #182134; }
+h1 { font-size: 18px; }
+label { display: block; margin: 12px 0; }
+input { box-sizing: border-box; width: 100%; padding: 8px; }
+.actions { display: flex; gap: 8px; margin: 10px 0; }
+button { flex: 1; padding: 9px; cursor: pointer; }
+#go { width: 100%; box-sizing: border-box; margin: 12px 0; padding: 12px; font-size: 15px; font-weight: 700;
+  background: #1755d1; color: white; border: 1px solid #1755d1; border-radius: 6px; cursor: pointer; }
+#go:disabled { opacity: .5; cursor: default; }
+.sub { background: #f1f3f8; border: 1px solid #d5dbe6; border-radius: 4px; }
+button:disabled { opacity: .5; cursor: default; }
+output { display: block; padding: 10px; background: #eff3fa; white-space: pre-wrap; }
+#error { color: #ad1724; }
+#logs { height: 220px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; background: #f5f6f8; padding: 8px; }
+fieldset { border: 1px solid #d5dbe6; border-radius: 6px; margin: 10px 0; padding: 4px 10px 8px; }
+legend { font-weight: 600; padding: 0 4px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10px; }
+.grid label { margin: 6px 0; font-size: 12px; }
+.flow { background: #eff3fa; padding: 8px; border-radius: 6px; }
+.warn { color: #ad1724; font-size: 12px; }
+.tiny { font-size: 11px; color: #6b7280; margin: 6px 0 2px; }
+.chk { display: flex; align-items: center; gap: 6px; margin: 8px 0; font-size: 12px; }
+.chk input { width: auto; }
